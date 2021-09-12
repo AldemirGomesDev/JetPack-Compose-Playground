@@ -1,4 +1,4 @@
-package com.aldemir.jetpackcompose.ui.components
+package com.aldemir.jetpackcompose.ui.components.Drawer
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -31,6 +31,7 @@ fun Drawer(scope: CoroutineScope, scaffoldState: ScaffoldState, navController: N
     val items = listOf(
         NavDrawerItem.Home,
         NavDrawerItem.Music,
+        NavDrawerItem.Movies,
         NavDrawerItem.Profile,
         NavDrawerItem.Settings
     )
