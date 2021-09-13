@@ -18,8 +18,8 @@ fun BottomBar(navController: NavController){
 
     val items = listOf(
         BottomNavItem.Home,
-        BottomNavItem.Music,
-        BottomNavItem.Movies,
+        BottomNavItem.Dialogs,
+        BottomNavItem.Login,
         BottomNavItem.Profile,
         BottomNavItem.Settings
     )

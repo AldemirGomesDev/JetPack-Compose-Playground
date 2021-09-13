@@ -24,7 +24,9 @@ import com.aldemir.jetpackcompose.ui.components.bottomNavigation.BottomNavItem
 import com.aldemir.jetpackcompose.ui.theme.*
 import android.view.WindowManager
 import androidx.activity.viewModels
+import com.aldemir.jetpackcompose.ui.pages.Dialogs
 import com.aldemir.jetpackcompose.ui.pages.LoginScreen
+import com.aldemir.jetpackcompose.ui.pages.ShowSnackBar
 
 
 val list = listOf(
@@ -116,16 +118,16 @@ fun MainScreen(viewModel: EmployeeViewModel, context: Context) {
             TopBar(scope = scope, scaffoldState = scaffoldState)
         },
         floatingActionButtonPosition = FabPosition.End,
-        floatingActionButton = {
-            FloatingActionButton(
-                onClick = {
-                },
-                backgroundColor = Purple500,
-                contentColor = White,
-            ) {
-                Icon(Icons.Filled.Add, "")
-            }
-        },
+//        floatingActionButton = {
+//            FloatingActionButton(
+//                onClick = {
+//                },
+//                backgroundColor = Purple500,
+//                contentColor = White,
+//            ) {
+//                Icon(Icons.Filled.Add, "")
+//            }
+//        },
         drawerContent = {
             Drawer(scope = scope, scaffoldState = scaffoldState, navController = navController)
         },
@@ -148,17 +150,17 @@ fun Navigation(navController: NavHostController, viewModel: EmployeeViewModel, c
         composable(NavDrawerItem.Home.route) {
             UserList(viewModel = viewModel, context = context)
         }
-        composable(NavDrawerItem.Music.route) {
-            MusicScreen()
+        composable(NavDrawerItem.Dialogs.route) {
+            Dialogs()
         }
-        composable(NavDrawerItem.Movies.route) {
-            MoviesScreen()
+        composable(NavDrawerItem.Login.route) {
+            LoginScreen()
         }
         composable(NavDrawerItem.Books.route) {
             BooksScreen()
         }
         composable(NavDrawerItem.Profile.route) {
-            ProfileScreen()
+            ShowSnackBar()
         }
         composable(NavDrawerItem.Settings.route) {
             SettingsScreen()
@@ -167,16 +169,16 @@ fun Navigation(navController: NavHostController, viewModel: EmployeeViewModel, c
         composable(BottomNavItem.Home.route) {
             UserList(viewModel = viewModel, context = context)
         }
-        composable(BottomNavItem.Music.route) {
+        composable(BottomNavItem.Dialogs.route) {
+            Dialogs()
+        }
+
+        composable(BottomNavItem.Login.route) {
             LoginScreen()
         }
 
-        composable(BottomNavItem.Movies.route) {
-            MoviesScreen()
-        }
-
         composable(BottomNavItem.Profile.route) {
-            ProfileScreen()
+            ShowSnackBar()
         }
 
         composable(BottomNavItem.Settings.route) {

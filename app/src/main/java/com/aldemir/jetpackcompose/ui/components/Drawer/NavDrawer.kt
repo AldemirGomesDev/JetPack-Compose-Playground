@@ -30,8 +30,8 @@ import kotlinx.coroutines.launch
 fun Drawer(scope: CoroutineScope, scaffoldState: ScaffoldState, navController: NavController) {
     val items = listOf(
         NavDrawerItem.Home,
-        NavDrawerItem.Music,
-        NavDrawerItem.Movies,
+        NavDrawerItem.Dialogs,
+        NavDrawerItem.Login,
         NavDrawerItem.Profile,
         NavDrawerItem.Settings
     )
