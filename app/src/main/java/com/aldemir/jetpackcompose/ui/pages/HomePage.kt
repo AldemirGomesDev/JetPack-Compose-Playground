@@ -1,4 +1,4 @@
-package com.aldemir.jetpackcompose
+package com.aldemir.jetpackcompose.ui.pages
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -28,8 +28,10 @@ import com.google.accompanist.coil.rememberCoilPainter
 fun EmployeeItem(empData: User, onClick: () -> Unit) {
     Card(
         modifier = Modifier
-            .padding(bottom = 5.dp, top = 5.dp,
-                start = 5.dp, end = 5.dp)
+            .padding(
+                bottom = 5.dp, top = 5.dp,
+                start = 5.dp, end = 5.dp
+            )
             .fillMaxWidth()
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(15.dp),
@@ -44,11 +46,13 @@ fun EmployeeItem(empData: User, onClick: () -> Unit) {
                 modifier = Modifier.size(130.dp),
                 shape = RoundedCornerShape(12.dp),
                 color = MaterialTheme.colors.surface.copy(
-                    alpha = 0.2f)
+                    alpha = 0.2f
+                )
             ) {
                 val image = rememberCoilPainter(
                     request = empData.avatar,
-                    fadeIn = true)
+                    fadeIn = true
+                )
                 Image(
                     painter = image,
                     contentDescription = null,

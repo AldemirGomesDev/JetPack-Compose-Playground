@@ -3,7 +3,6 @@ package com.aldemir.jetpackcompose.ui
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Surface
@@ -15,7 +14,7 @@ import androidx.paging.PagingData
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.itemsIndexed
-import com.aldemir.jetpackcompose.EmployeeItem
+import com.aldemir.jetpackcompose.ui.pages.EmployeeItem
 import com.aldemir.jetpackcompose.model.User
 import com.aldemir.jetpackcompose.ui.state.ErrorItem
 import com.aldemir.jetpackcompose.ui.state.LoadingItem

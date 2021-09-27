@@ -23,7 +23,7 @@ fun ShowSnackBar() {
         Modifier.padding(top = 20.dp)
     ) {
         val coroutineScope = rememberCoroutineScope()
-        val snackbarHostState = SnackbarHostState()
+        val snackBarHostState = SnackbarHostState()
         Column(
             Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
@@ -31,7 +31,7 @@ fun ShowSnackBar() {
             Button(
                 onClick = {
                     coroutineScope.launch {
-                        snackbarHostState.showSnackbar(
+                        snackBarHostState.showSnackbar(
                             message = "Jetpack Compose Rocks",
                             actionLabel = "HIDE",
                             duration = SnackbarDuration.Long
@@ -39,11 +39,11 @@ fun ShowSnackBar() {
                     }
                 }
             ) {
-                Text(text = "Show Snackbar")
+                Text(text = "Show SnackBar")
             }
         }
 
-        SnackBarHost(snackbarHostState)
+        SnackBarHost(snackBarHostState)
     }
 }
 

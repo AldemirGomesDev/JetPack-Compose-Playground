@@ -24,8 +24,10 @@ import com.aldemir.jetpackcompose.ui.components.bottomNavigation.BottomNavItem
 import com.aldemir.jetpackcompose.ui.theme.*
 import android.view.WindowManager
 import androidx.activity.viewModels
+import androidx.compose.ui.ExperimentalComposeUiApi
 import com.aldemir.jetpackcompose.ui.pages.Dialogs
 import com.aldemir.jetpackcompose.ui.pages.LoginScreen
+import com.aldemir.jetpackcompose.ui.pages.OTPScreen
 import com.aldemir.jetpackcompose.ui.pages.ShowSnackBar
 
 
@@ -64,6 +66,7 @@ val list = listOf(
     "Lorena"
 )
 
+@ExperimentalComposeUiApi
 class MainActivity : ComponentActivity() {
 
     private val employeeViewModel: EmployeeViewModel by viewModels()
@@ -107,6 +110,7 @@ class MainActivity : ComponentActivity() {
 
 }
 
+@ExperimentalComposeUiApi
 @Composable
 fun MainScreen(viewModel: EmployeeViewModel, context: Context) {
     val scaffoldState = rememberScaffoldState(rememberDrawerState(DrawerValue.Closed))
@@ -144,6 +148,7 @@ fun MainScreen(viewModel: EmployeeViewModel, context: Context) {
     }
 }
 
+@ExperimentalComposeUiApi
 @Composable
 fun Navigation(navController: NavHostController, viewModel: EmployeeViewModel, context: Context) {
     NavHost(navController, startDestination = NavDrawerItem.Home.route) {
@@ -163,7 +168,7 @@ fun Navigation(navController: NavHostController, viewModel: EmployeeViewModel, c
             ShowSnackBar()
         }
         composable(NavDrawerItem.Settings.route) {
-            SettingsScreen()
+            OTPScreen()
         }
         //Bottom Navigation
         composable(BottomNavItem.Home.route) {
@@ -182,7 +187,7 @@ fun Navigation(navController: NavHostController, viewModel: EmployeeViewModel, c
         }
 
         composable(BottomNavItem.Settings.route) {
-            SettingsScreen()
+            OTPScreen()
         }
 
     }
