@@ -25,46 +25,8 @@ import com.aldemir.jetpackcompose.ui.theme.*
 import android.view.WindowManager
 import androidx.activity.viewModels
 import androidx.compose.ui.ExperimentalComposeUiApi
-import com.aldemir.jetpackcompose.ui.pages.Dialogs
-import com.aldemir.jetpackcompose.ui.pages.LoginScreen
-import com.aldemir.jetpackcompose.ui.pages.OTPScreen
-import com.aldemir.jetpackcompose.ui.pages.ShowSnackBar
+import com.aldemir.jetpackcompose.ui.pages.*
 
-
-val list = listOf(
-    "aldemir",
-    "Eleonai",
-    "Layssa",
-    "Lorena",
-    "aldemir",
-    "Eleonai",
-    "Layssa",
-    "Lorena",
-    "aldemir",
-    "Eleonai",
-    "Layssa",
-    "Lorena",
-    "aldemir",
-    "Eleonai",
-    "Layssa",
-    "Lorena",
-    "aldemir",
-    "Eleonai",
-    "Layssa",
-    "Lorena",
-    "aldemir",
-    "Eleonai",
-    "Layssa",
-    "Lorena",
-    "aldemir",
-    "Eleonai",
-    "Layssa",
-    "Lorena",
-    "aldemir",
-    "Eleonai",
-    "Layssa",
-    "Lorena"
-)
 
 @ExperimentalComposeUiApi
 class MainActivity : ComponentActivity() {
@@ -169,6 +131,9 @@ fun Navigation(navController: NavHostController, viewModel: EmployeeViewModel, c
         }
         composable(NavDrawerItem.Settings.route) {
             OTPScreen()
+        }
+        composable(NavDrawerItem.Swipe.route) {
+            SwipeRefreshCompose()
         }
         //Bottom Navigation
         composable(BottomNavItem.Home.route) {

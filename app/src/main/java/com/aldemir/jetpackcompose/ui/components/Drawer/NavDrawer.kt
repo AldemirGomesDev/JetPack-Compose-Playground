@@ -33,7 +33,8 @@ fun Drawer(scope: CoroutineScope, scaffoldState: ScaffoldState, navController: N
         NavDrawerItem.Dialogs,
         NavDrawerItem.Login,
         NavDrawerItem.Profile,
-        NavDrawerItem.Settings
+        NavDrawerItem.Settings,
+        NavDrawerItem.Swipe
     )
     Column(
         modifier = Modifier
